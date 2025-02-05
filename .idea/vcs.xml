@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/eureka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-bet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-customer-bet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-footballteam" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-match" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-tournament" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ui-soccer-bet-app" vcs="Git" />
+  </component>
+</project>
