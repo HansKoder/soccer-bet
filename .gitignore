@@ -1,0 +1,33 @@
+# === JAVA & MAVEN ===
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# Maven wrapper
+.mvn/
+!**/maven-wrapper.jar
+
+# === IDEA ===
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# === VSCode ===
+.vscode/
+
+# === NODE / FRONTEND ===
+**/node_modules/
+dist/
+build/
+
+# === SISTEMAS ===
+.DS_Store
+Thumbs.db
+
+# === LOGS ===
+logs/
+*.log
