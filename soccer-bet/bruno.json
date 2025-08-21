@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "soccer-bet",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

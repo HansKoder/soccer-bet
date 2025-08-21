@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: soccer-service
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: DEBUG
+        security.web: DEBUG
+        security.authentication: DEBUG
+

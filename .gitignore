@@ -1,5 +1,5 @@
 # === JAVA & MAVEN ===
-target/
+**/target/
 *.class
 *.jar
 *.war
@@ -15,6 +15,12 @@ target/
 *.iml
 *.ipr
 *.iws
+
+# Gradle
+.gradle/
+build/
+**/gradle/
+*.log
 
 # === VSCode ===
 .vscode/
