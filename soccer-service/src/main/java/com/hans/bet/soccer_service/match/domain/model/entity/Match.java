@@ -37,6 +37,20 @@ public class Match extends AggregateRoot<MatchId> {
         return match;
     }
 
+    public void start () {
+        if (!statusMatch.equals(StatusMatch.SCHEDULED))
+            throw new SoccerDomainException("Status must be scheduled");
+
+        statusMatch = StatusMatch.STARTED;
+    }
+
+    public void finish () {
+        if (!statusMatch.equals(StatusMatch.STARTED))
+            throw new SoccerDomainException("Status must be started");
+
+        statusMatch = StatusMatch.FINISHED;
+    }
+
     public Team getLocal() {
         return local;
     }

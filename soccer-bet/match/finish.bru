@@ -1,0 +1,16 @@
+meta {
+  name: finish
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/v1/match/finish/84ad7571-eecf-4000-8d5f-7c687b8388a6
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: admin
+  password: admin
+}

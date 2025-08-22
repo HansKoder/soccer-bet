@@ -1,6 +1,6 @@
 package com.hans.bet.soccer_service.match.application.usecase;
 
-import com.hans.bet.soccer_service.match.application.port.in.GetMatchUseCase;
+import com.hans.bet.soccer_service.match.application.port.in.StartMatchUseCase;
 import com.hans.bet.soccer_service.match.application.port.out.MatchRepository;
 import com.hans.bet.soccer_service.match.domain.model.entity.Match;
 import com.hans.bet.soccer_service.match.domain.model.exception.MatchNotFoundException;
@@ -9,17 +9,21 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-public class GetMatchUseCaseImpl implements GetMatchUseCase {
+public class StartMatchUseCaseImpl implements StartMatchUseCase {
 
     private final MatchRepository matchRepository;
 
-    public GetMatchUseCaseImpl(MatchRepository matchRepository) {
+    public StartMatchUseCaseImpl(MatchRepository matchRepository) {
         this.matchRepository = matchRepository;
     }
 
     @Override
-    public Match execute(String uuid) {
-        return matchRepository.get(UUID.fromString(uuid))
-                .orElseThrow(() -> new MatchNotFoundException("Match is not found with the id " + uuid));
+    public void execute(String matchId) {
+        Match domain = matchRepository.get(UUID.fromString(matchId))
+                .orElseThrow(() -> new MatchNotFoundException("Match with the ID " + matchId + " is not found"));
+
+        domain.start();
+
+        matchRepository.save(domain);
     }
 }
