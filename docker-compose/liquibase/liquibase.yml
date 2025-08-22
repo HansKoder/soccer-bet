@@ -8,9 +8,9 @@ services:
       - ./config/changelog.xml:/liquibase/changelog.xml
       - ./scripts:/liquibase/scripts
     networks:
-      - postgres_soccer_network
+      - soccer_network
 
 
 networks:
-  postgres_soccer_network:
+  soccer_network:
     external: true

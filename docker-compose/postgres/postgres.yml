@@ -18,4 +18,4 @@ volumes:
 
 networks:
   soccer_network:
-    driver: bridge
+    external: true
