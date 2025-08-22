@@ -1,0 +1,16 @@
+services:
+
+  liquibase:
+    container_name: liquibase
+    image: liquibase/liquibase
+    command: update --changelog-file=changelog.xml --username=soccer_user --password=soccer_pass --url=jdbc:postgresql://postgres:5432/soccer_db
+    volumes:
+      - ./config/changelog.xml:/liquibase/changelog.xml
+      - ./scripts:/liquibase/scripts
+    networks:
+      - postgres_soccer_network
+
+
+networks:
+  postgres_soccer_network:
+    external: true

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: soccer_user
+      POSTGRES_PASSWORD: soccer_pass
+      POSTGRES_DB: soccer_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - soccer_network
+
+volumes:
+  postgres_data:
+
+networks:
+  soccer_network:
+    driver: bridge

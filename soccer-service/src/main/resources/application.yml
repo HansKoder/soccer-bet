@@ -2,6 +2,23 @@ spring:
   application:
     name: soccer-service
 
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/soccer_db
+    username: soccer_user
+    password: soccer_pass
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-init-sql: SET TIME ZONE 'UTC'
+
 logging:
   level:
     root: INFO

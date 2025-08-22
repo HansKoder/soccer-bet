@@ -1,0 +1,7 @@
+CREATE TABLE matches (
+    id UUID PRIMARY KEY,
+    local VARCHAR(100) NOT NULL,
+    visiting VARCHAR(100) NOT NULL,
+    tournament VARCHAR(150) NOT NULL,
+    status VARCHAR(20) NOT NULL CHECK (status IN ('SCHEDULED', 'STARTED', 'FINISHED'))
+);
