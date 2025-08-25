@@ -1,9 +1,8 @@
 package com.hans.bet.soccer_service.auth.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -24,6 +23,9 @@ public class UserEntity {
 
     @Column(nullable = false)
     private Boolean disabled;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private List<UserRoleEntity> roles;
 
     public Boolean getDisabled() {
         return disabled;
@@ -63,6 +65,10 @@ public class UserEntity {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public List<UserRoleEntity> getRoles() {
+        return roles;
     }
 
     @Override

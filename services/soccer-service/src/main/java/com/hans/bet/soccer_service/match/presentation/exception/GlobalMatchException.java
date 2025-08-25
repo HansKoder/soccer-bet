@@ -2,7 +2,7 @@ package com.hans.bet.soccer_service.match.presentation.exception;
 
 import com.hans.bet.soccer_service.match.domain.model.exception.MatchNotFoundException;
 import com.hans.bet.soccer_service.match.domain.model.exception.SoccerDomainException;
-import com.hans.bet.soccer_service.shared.domain.presentation.exception.ErrorResponse;
+import com.hans.bet.soccer_service.shared.presentation.exception.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

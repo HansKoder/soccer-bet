@@ -1,0 +1,18 @@
+meta {
+  name: login-player
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "player123",
+    "password": "player.123"
+  }
+}

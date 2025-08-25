@@ -5,12 +5,11 @@ meta {
 }
 
 put {
-  url: http://localhost:8080/api/v1/match/start/987af314-630a-4325-a157-61f54d5f04a5
+  url: http://localhost:8080/api/v1/match/start/8ecee3dd-9c43-43d2-a3a5-84e965fc05da
   body: json
-  auth: basic
+  auth: bearer
 }
 
-auth:basic {
-  username: admin
-  password: admin
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJib29rbWFrZXIxMjMiLCJpc3MiOiJzb2NjZXJfYmV0IiwiaWF0IjoxNzU2MTA0MTIwLCJleHAiOjE3NTYxOTA1MjB9.1ZRigNY7n6A0EFJgKprbkTIhtYnVMUDyXQ7wzEXvdtg
 }

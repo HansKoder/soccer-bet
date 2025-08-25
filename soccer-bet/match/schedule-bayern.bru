@@ -1,0 +1,23 @@
+meta {
+  name: schedule-bayern
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/api/v1/match/schedule
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwbGF5ZXIxMjMiLCJpc3MiOiJzb2NjZXJfYmV0IiwiaWF0IjoxNzU2MTA1MjU1LCJleHAiOjE3NTYxOTE2NTV9.c4Ktlutj_I5_v0S4NMLO958vz7HeCBnCgG7XDeJFVaU
+}
+
+body:json {
+  {
+    "local": "Real",
+    "visiting": "Bayern",
+    "tournament": "Champions"
+  }
+}

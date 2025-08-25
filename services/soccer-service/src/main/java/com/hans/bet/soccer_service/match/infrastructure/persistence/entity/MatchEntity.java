@@ -1,12 +1,16 @@
 package com.hans.bet.soccer_service.match.infrastructure.persistence.entity;
 
+import com.hans.bet.soccer_service.shared.infra.persistence.AuditableEntity;
 import jakarta.persistence.*;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table(name = "matches")
-public class MatchEntity {
+@EntityListeners(AuditingEntityListener.class)
+public class MatchEntity extends AuditableEntity implements Serializable {
 
     @Id
     private UUID id;
